@@ -7,7 +7,17 @@
 
   <ul>
   <% @comments.each do |comment| %>
-    <li><%= comment.content %></li>
+    <li><%= comment.content %>
+      <br />
+      <%= form_tag homepage_index_path, method: :PATCH do %>
+        <%= submit_tag "Like" %>
+      <% end %>
+      <%= "#{comment.like} "%>
+      <%= form_tag homepage_index_path, method: :PATCH do %>
+        <%= submit_tag "Dislike" %>
+      <% end %>
+      <%= "#{comment.dislike} "%>
+    </li>
   <% end %>
   </ul>
 </div>

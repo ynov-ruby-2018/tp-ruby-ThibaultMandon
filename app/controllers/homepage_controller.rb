@@ -11,4 +11,9 @@ class HomepageController < ApplicationController
 
     redirect_to homepage_index_path
   end
+  def update
+    Comment.update!(
+
+    )
+  end
 end
