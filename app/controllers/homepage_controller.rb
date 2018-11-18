@@ -16,4 +16,5 @@ class HomepageController < ApplicationController
 
     )
   end
+  # Il manque des features !!!
 end
